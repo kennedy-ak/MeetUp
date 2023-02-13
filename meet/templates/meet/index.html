@@ -7,12 +7,42 @@
 {% endblock%}
 
 {% block css_files%}
-
-<link rel="stylesheet" href="{% static 'meet/styles.css'%}">
-
+    <link rel="stylesheet" href="{% static 'meet/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'meet/meetup-detail.css'%}">
 {%endblock%}
 
 
 {% block content %}
-<h1> This is the home page</h2>
+    <header id="main-header">
+        <nav><a href="/" id="main-logo"> Django MeetUps</a></nav>
+        <h1>We got greate meetups comming up!</h1>
+        <p>Find the on that best suits your needs!</p>
+    </header>
+    <main>
+        <section>
+            <h2>Upcoming Meetings</h2>
+            <ol>
+                {% for meet in meetups%}
+                    <li class="meetup-item">
+                        <article>
+                            <div class ="meetup-summary">
+                                <div class="meetup-image">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="meetup-details">
+                                    <h3>{{meet.title}}</h3>
+                                    <address>{{meet.location}}</address>
+                                </div>
+                            </div>
+                            <div class="meetup-actions">
+                                <a href="" class="btn">More Details</a>                                
+                            </div>
+                        </article>
+                    </li>
+                {%endfor%}
+            </ol>
+        </section>
+    </main>
+
+
 {% endblock %}
