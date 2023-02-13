@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
+{% load static%}
 
 
 {% block title%}
     All MeetUps!
 {% endblock%}
 
+{% block css_files%}
+
+<link rel="stylesheet" href="{% static 'meet/styles.css'%}">
+
+{%endblock%}
 
 
 {% block content %}
