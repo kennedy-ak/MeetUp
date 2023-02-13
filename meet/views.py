@@ -3,5 +3,6 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def home(request):
-    return HttpResponse("hello")
+def index(request):
+    return render(request, "meet/index.html")
+
