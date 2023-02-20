@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("",views.index)
+    path("meetups",views.index,name="all-meetups"), # 0ur main url
+    path("meetups/<slug:meetup_slug>",views.meetup_details,name="meetup-detail") #
 ]

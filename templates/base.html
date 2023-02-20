@@ -11,8 +11,13 @@
         {% block css_files%}{%endblock%}
     </head>
     <body>
-            {% block content%}
+        {% block content%}
+            <header id="main-header">
+                <nav><a href="/" id="main-logo"> Django MeetUps</a></nav>
+                <h1>We got greate meetups comming up!</h1>
+                <p>Find the on that best suits your needs!</p>
+            </header>
 
-            {% endblock%}
+        {% endblock%}
     </body>
 </html>
